@@ -1,0 +1,147 @@
+All 33 Keywords :-
+False	class	finally   is	return
+None	for     lambda	try     continue
+True	def     from	while   nonlocal
+and     del     global  not     with
+as      elif	if      or      yield
+assert	else	import  pass
+break	except	in      raise
+--------------------------------------------------------------
+yield returns a generator
+ef generator():
+    for i in range(6):
+        yield i*i
+
+g = generator()
+for i in g:
+    print(i)
+---------------------------------------------------------------
+import keyword
+print(keyword.kwlist) # prints all keywords
+---------------------------------------------------------------
+try:
+    Try-block
+except exception1:
+    Exception1-block
+except exception2:
+    Exception2-block
+else:
+    Else-block
+finally:
+    Finally-block
+----------------------------------------------------------------
+continuation character (\) used when multiline is required
+----------------------------------------------------------------
+if True:
+    print('Hello')
+    a = 5
+Or,
+if True: print('Hello'); a = 5
+# Both Lines Means Same
+-----------------------------------------------------------------
+isinstance(1+2j,complex) -> True
+A floating point number is accurate up to 15 decimal places
+-----------------------------------------------------------------
+f = open('t.txt', 'w')
+print(a, file=f) # Print In A File. By Default file='sys.stdout'
+
+print('The value of x is {} and y is {}'.format(x,y))
+print('I love {0} and {1}'.format('bread','butter'))
+print('Hello {name}, {greeting}'.format(greeting = 'Goodmorning', name = 'John'))
+
+x = 12.3456789
+print('The value of x is %3.2f' %x)
+-----------------------------------------------------------------
+int('2+3') -> Value Error
+eval('2+3+4') -> For Expressions
+-----------------------------------------------------------------
+log.basicConfig(filename='logs.log', level=log.DEBUG)
+log.log(level=log.ERROR, msg='Hi, I Am Krishna')
+log.error("Hello")
+-----------------------------------------------------------------
+f = lambda x : 2 * x
+print f(3)
+
+list = [1,2,3,4,5]
+squaredList = map(lambda x: x*x, list)
+print(squaredList)
+
+list = [1,2,3,4,5,6,7,8,9,10]
+newList = filter(lambda x: x % 2 == 0, list)
+print(newList)
+
+list = [10,6,7,5,2,1,8,5]
+s = reduce(lambda x,y: x if (x > y) else y, list)
+print(s)
+------------------------------------------------------------------
+print(256 is int("256")) # Returns True
+print(257 is int("257")) # Returns False
+print(id(257) , id(int("257"))) # Prints The Address Assigned In RAM
+# -5 To 255 : Memory Is Assigned Before The Program Execution
+
+Local variable in function are destroyed once we return
+from the function.
+-------------------------------------------------------------------
+https://www.programiz.com/python-programming/methods/built-in/abs
+-------------------------------------------------------------------
+print('Magnitude of 3 - 4j is:', abs(3 - 4j) -> 5
+
+The any() method returns:
+True : if at least one element of an iterable is true
+False : if all elements are false or if an iterable is empty
+d = {0: 'False'}; print(any(d)) -> returns False.
+
+The all() method returns:
+True - If all elements in an iterable are true
+False - If any element in an iterable is false
+
+The bin() method takes a single parameter:
+num - an integer number whose binary equivalent is to be calculated.
+If not an integer, should implement __index__() method to return an integer.
+
+It's not mandatory to pass a value to bool(). If you do not pass a value, bool() returns False.
+
+The bool() returns:
+False if the value is omitted or false
+True if the value is true
+
+The following values are considered false in Python:
+None
+False
+Zero of any numeric type. For example, 0, 0.0, 0j
+Empty sequence. For example, (), [], ''.
+Empty mapping. For example, {}
+objects of Classes which has __bool__() or __len()__ method which returns 0 or False
+Ex. bool([0]) -> returns True.
+
+The callable() method returns:
+True - if the object appears callable
+False - if the object is not callable.
+
+The compile() method returns a Python code object from the source.
+codeInString = 'a = 5\nb=6\nsum=a+b\nprint("sum =",sum)'
+codeObejct = compile(codeInString, 'sumstring', 'exec')
+exec(codeObejct)
+
+# Any number of arguments in a function can have a default value.
+# But once we have a default argument, all the arguments to its
+# right must also have default values.
+
+In function : 1) positional arguments & 2) keyword arguments
+Having a positional argument after keyword arguments will result into errors.
+greet(name="Bruce","How do you do?") -> SyntaxError: non-keyword arg after keyword arg
+
+using '*' asterisk before keyword. Then we can pass multiple parameters. [Becomes A Tuple]
+-----
+What is a class method?
+A class method is a method that is bound to a class rather than its object.
+It doesn't require creation of a class instance, much like staticmethod.
+
+The difference between a static method and a class method is:
+-> Static method knows nothing about the class and just deals with the parameters
+-> Class method works with the class since its parameter is always the class itself.
+Can Be Called As : Class.classmethod() Or, Class().classmethod()
+But no matter what, the class method is always attached to a class with first argument as the class itself cls.
+
+
+
